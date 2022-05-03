@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="/main.js"></script> -->
+    <input  type="text" name="so_a" > nhập số a
+    <br> <br>
+    <input type="text" name="so_b"> nhập số b 
+    <br> <br>
+    <button id="button" onclick="tinhtong()" onmouseover="changecolor()"> tính  </button>
+    <p id="tong"></p> 
+    <p id="hieu"></p>
+    <p id="tich"></p>
+    <p id="thuong"></p>
+    <p id="du"></p>
+    
+    <script> 
+        function tinhtong() {
+            var so_a= document.getElementsByName('so_a')[0].value;
+            var so_b= document.getElementsByName('so_b')[0].value;
+
+            if (so_a==''|| so_b==''){
+                alert('ban chua nhap du du lieu');
+            } else {
+                var c = parseInt(so_a) + parseInt(so_b);
+                document.getElementById("tong").innerHTML= 'tổng = ' + c;
+                var d = parseInt(so_a) - parseInt(so_b);
+                document.getElementById("hieu").innerHTML = 'hiệu = ' + d;
+                var e = parseInt(so_a) * parseInt(so_b);
+                document.getElementById("tich").innerHTML = 'tích = ' + e;
+                var f = parseInt(so_a) / parseInt(so_b);
+                document.getElementById("thuong").innerHTML = 'thương = ' + f;
+                var g = parseInt(so_a) % parseInt(so_b);
+                document.getElementById("du").innerHTML = 'dư = ' + g;
+            }
+            
+
+
+        }
+        function changecolor() {
+            
+            document.getElementById('button').style.backgroundColor = 'pink';
+        }
+        
+
+    </script>
+
+    
+  
+</body>
+</html>
